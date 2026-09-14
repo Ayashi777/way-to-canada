@@ -1,0 +1,20 @@
+# Private source materials: never publish or commit these.
+private/
+
+# Telegram exports and local research databases.
+telegram-export/
+*.sqlite
+*.sqlite3
+result.json
+
+# Credentials and local environment files.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Operating-system and editor files.
+.DS_Store
+Thumbs.db
+.vscode/
