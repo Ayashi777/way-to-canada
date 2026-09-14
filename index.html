@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Особистий план переїзду до Канади" />
+    <title>Way to Canada</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Особистий план</p>
+        <h1>Way to Canada</h1>
+        <p class="subtitle">Переїзд з Болгарії · статус · робота · шлях до PR</p>
+      </div>
+      <div class="progress-box" aria-label="Прогрес плану">
+        <span id="progress-label">0 з 0 кроків</span>
+        <div class="progress-track"><div id="progress-bar"></div></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="Критичний дедлайн">
+        <strong>Критичний орієнтир:</strong> подання на продовження українського open work permit — до <strong>31.03.2027</strong>.
+        Перед дією перевірити персональну відповідність умовам IRCC та спосіб в’їзду.
+        <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/ukraine-measures/open-work-permit-extension.html" target="_blank" rel="noreferrer">Офіційні умови IRCC</a>
+      </section>
+
+      <section class="status-grid" aria-label="Поточний статус">
+        <article>
+          <p class="card-label">Зараз</p>
+          <p>Софія, Болгарія</p>
+        </article>
+        <article>
+          <p class="card-label">Документ на в’їзд</p>
+          <p>Нова visitor visa (TRV) — у підготовці</p>
+        </article>
+        <article>
+          <p class="card-label">Work permit</p>
+          <p>Чинний до 02.2027 — перевірити умови продовження</p>
+        </article>
+        <article>
+          <p class="card-label">Ціль</p>
+          <p>Робота в Канаді + стабільний шлях до PR</p>
+        </article>
+      </section>
+
+      <nav class="filters" aria-label="Фільтр плану">
+        <button class="filter active" data-filter="all">Усе</button>
+        <button class="filter" data-filter="urgent">Терміново</button>
+        <button class="filter" data-filter="before-move">До в’їзду</button>
+        <button class="filter" data-filter="after-arrival">Після прильоту</button>
+        <button class="filter" data-filter="job">Робота</button>
+        <button class="filter" data-filter="pr">PR</button>
+      </nav>
+
+      <section class="plan" aria-label="План переїзду">
+        <article class="phase" data-phase="urgent before-move">
+          <div class="phase-heading"><span>01</span><div><h2>В’їзд і статус</h2><p>Зробити до купівлі квитків.</p></div></div>
+          <label class="task"><input type="checkbox" data-task="trv-strategy" /><span>Підготувати пакет на visitor visa (TRV): Болгарія, робота, сім’я, фінанси, пояснення попереднього CUAET.</span></label>
+          <label class="task"><input type="checkbox" data-task="passport-check" /><span>Перевірити два паспорти: для TRV використовувати чинний новий; додати старий із CUAET як історію поїздок.</span></label>
+          <label class="task"><input type="checkbox" data-task="wp-eligibility" /><span>Підтвердити в IRCC право саме на продовження WP та умову перебування в Канаді під час подання і рішення.</span></label>
+          <label class="task"><input type="checkbox" data-task="arrival-window" /><span>Визначити цільове вікно в’їзду з запасом до дедлайну та рішення по permit.</span></label>
+        </article>
+
+        <article class="phase" data-phase="before-move">
+          <div class="phase-heading"><span>02</span><div><h2>Підготовка до переїзду</h2><p>Документи, гроші, перші 30 днів.</p></div></div>
+          <label class="task"><input type="checkbox" data-task="city-choice" /><span>Обрати місто №1 і резервне місто за вакансіями, орендою та PR-маршрутом.</span></label>
+          <label class="task"><input type="checkbox" data-task="budget" /><span>Зібрати бюджет: квитки, 2–3 місяці житла, депозит, транспорт, медичні та шкільні витрати.</span></label>
+          <label class="task"><input type="checkbox" data-task="documents" /><span>Зібрати цифровий архів: паспорти, свідоцтва, дипломи, довідки, водійські права, медичні документи.</span></label>
+          <label class="task"><input type="checkbox" data-task="housing" /><span>Забронювати тимчасове житло й підготувати список варіантів довгострокової оренди.</span></label>
+        </article>
+
+        <article class="phase" data-phase="job before-move">
+          <div class="phase-heading"><span>03</span><div><h2>Пошук роботи</h2><p>Почати до переїзду, посилити після отримання адреси й SIN.</p></div></div>
+          <label class="task"><input type="checkbox" data-task="canada-resume" /><span>Зробити канадське CV та LinkedIn: digital marketing, eCommerce, CRO, automation, AI-проєкти.</span></label>
+          <label class="task"><input type="checkbox" data-task="portfolio" /><span>Зібрати портфоліо з 3–5 кейсів: цифри, роль, інструменти, результат.</span></label>
+          <label class="task"><input type="checkbox" data-task="job-targets" /><span>Створити список цільових ролей і компаній: marketing / eCommerce / growth / web / automation.</span></label>
+          <label class="task"><input type="checkbox" data-task="weekly-search" /><span>Налаштувати щотижневий ритм: вакансії, персональні звернення, заявки, follow-up.</span></label>
+        </article>
+
+        <article class="phase" data-phase="after-arrival">
+          <div class="phase-heading"><span>04</span><div><h2>Перші 30 днів у Канаді</h2><p>Побут, право працювати, адаптація.</p></div></div>
+          <label class="task"><input type="checkbox" data-task="sin" /><span>Отримати SIN після підтвердження права на роботу.</span></label>
+          <label class="task"><input type="checkbox" data-task="bank-phone" /><span>Відкрити банківський рахунок, картку та канадський номер телефону.</span></label>
+          <label class="task"><input type="checkbox" data-task="health-school" /><span>Подати документи на провінційну медичну програму та школу для Софії.</span></label>
+          <label class="task"><input type="checkbox" data-task="permit-apply" /><span>Подати на продовження open work permit, якщо відповідність умовам підтверджена.</span></label>
+        </article>
+
+        <article class="phase" data-phase="pr">
+          <div class="phase-heading"><span>05</span><div><h2>Паралельний шлях до PR</h2><p>Не чекати, поки закінчиться permit.</p></div></div>
+          <label class="task"><input type="checkbox" data-task="language" /><span>Скласти план IELTS General / CELPIP та цільовий CLB.</span></label>
+          <label class="task"><input type="checkbox" data-task="eca" /><span>Визначити, чи потрібна ECA, та почати оцінку освіти.</span></label>
+          <label class="task"><input type="checkbox" data-task="pr-routes" /><span>Вести окремий трекер маршрутів: RCIP — основний, AIP — паралельно, SINP — за роботодавцем.</span></label>
+          <label class="task"><input type="checkbox" data-task="canadian-experience" /><span>Фіксувати канадський досвід роботи, NOC/TEER, години й документи для майбутньої заявки.</span></label>
+        </article>
+      </section>
+    </main>
+
+    <footer>Way to Canada · дані зберігаються локально у твоєму браузері</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
