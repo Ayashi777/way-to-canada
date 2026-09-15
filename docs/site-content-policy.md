@@ -4,16 +4,9 @@
 
 ## Єдине джерело даних
 
-`scripts/build-site.mjs` читає лише явний allowlist:
+`scripts/build-site.mjs` читає лише явний allowlist безпечних Markdown-документів: стартову сторінку, актуальний план, контрольні точки, рішення, тематичні документи `docs/`, місячний журнал, знеособлені дослідження, шаблони та документацію структури репозиторію. Кожен файл із цього переліку перетворюється на розділ одного сайту, а головний план додатково формує блок «Що важливо зараз».
 
-- `docs/master-plan.md`
-- `docs/timeline.md`
-- `docs/decisions.md`
-- `docs/immigration/official-sources.md`
-- усі місячні журнали формату `journal/YYYY-MM.md`
-- знеособлений артефакт аудиту Telegram-архіву
-
-Під час кожного push у `main` єдиний workflow `.github/workflows/pages.yml` створює `dist/site-data.json` і публікує лише папку `dist` у GitHub Pages.
+Під час кожного push у `main` єдиний workflow `.github/workflows/pages.yml` створює `dist/index.html` і публікує лише папку `dist` у GitHub Pages.
 
 ## Межі безпеки
 
