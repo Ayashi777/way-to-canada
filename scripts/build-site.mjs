@@ -8,7 +8,7 @@ const publicDocuments = [
   ['Початок', 'README.md'], ['План', 'docs/master-plan.md'], ['План', 'docs/timeline.md'], ['Рішення', 'docs/decisions.md'],
   ['Імміграція', 'docs/immigration/status-and-visas.md'], ['Імміграція', 'docs/immigration/work-permit-extension.md'], ['Імміграція', 'docs/immigration/pr-strategy.md'], ['Імміграція', 'docs/immigration/official-sources.md'],
   ['Кар’єра', 'docs/career/job-search-strategy.md'], ['Кар’єра', 'docs/career/resume-and-linkedin.md'], ['Кар’єра', 'docs/career/target-employers.md'],
-  ['Поселення', 'docs/settlement/budget.md'], ['Поселення', 'docs/settlement/housing-health-school.md'], ['Поселення', 'docs/settlement/first-90-days.md'],
+  ['Поселення', 'docs/settlement/budget.md'], ['Поселення', 'docs/settlement/housing-health-school.md'], ['Поселення', 'docs/settlement/first-90-days.md'], ['Поселення', 'docs/settlement/documents-to-bring.md'],
   ['Навички', 'docs/language-and-skills.md'], ['Дані', 'docs/data/README.md'], ['Дані', 'docs/data/telegram-archive-governance.md'], ['Дані', 'docs/data/telegram-archive-local-index.md'],
   ['Приватність', 'docs/private-materials-index.md'], ['Журнал', 'journal/2026-09.md'], ['Артефакти', 'artifacts/research/2026-09-15-telegram-archive-audit.md'], ['Шаблони', 'artifacts/templates/daily-review-checklist.md'], ['Проєкт', 'repository_restructure_plan.md'], ['Проєкт', 'docs/site-content-policy.md'],
 ];

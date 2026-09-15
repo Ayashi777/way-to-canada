@@ -8,6 +8,7 @@
 - [Контрольні точки](docs/timeline.md)
 - [Журнал рішень](docs/decisions.md)
 - [Офіційні джерела IRCC](docs/immigration/official-sources.md)
+- [Чекліст документів до переїзду](docs/settlement/documents-to-bring.md)
 - [Безпечний індекс Telegram-архіву](docs/data/telegram-archive-local-index.md)
 - [Політика вмісту GitHub Pages](docs/site-content-policy.md)
 - [Місячний журнал](journal/2026-09.md)
