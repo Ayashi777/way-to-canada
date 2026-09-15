@@ -3,74 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Публічна база знань проєкту Way to Canada." />
+    <meta name="description" content="Згенерована база знань проєкту Way to Canada." />
     <title>База знань · Way to Canada</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header class="page-header">
-      <div>
-        <p class="eyebrow">Way to Canada / база знань</p>
-        <h1>План із доказами</h1>
-        <p class="subtitle">Короткі висновки, рішення і джерела — без приватних документів.</p>
-      </div>
-      <p class="updated-stamp">Оновлено<br /><strong>15.09.2026</strong></p>
-    </header>
-
+  <body data-page="knowledge">
+    <header class="page-header"><div><p class="eyebrow">Way to Canada / база знань</p><h1>План із доказами</h1><p class="subtitle">Консолідація дозволених документів без приватних даних.</p></div><p class="updated-stamp">Оновлено<br /><strong id="updated-date">—</strong></p></header>
     <main class="knowledge-page">
-      <nav class="crumbs" aria-label="Навігація"><a href="index.html">← До плану</a><a href="#archive">Індекс архіву</a><a href="#sources">Джерела IRCC</a><a href="#journal">Журнал</a></nav>
-
-      <section id="plan" class="knowledge-section feature-section">
-        <p class="eyebrow">01 / актуальний курс</p>
-        <h2>План не є чеклістом</h2>
-        <p>На головній сторінці показано лише погоджені наступні кроки. Виконання та зміни статусу фіксуються після щоденного огляду у журналі, а важливі розвилки — окремим рішенням.</p>
-        <div class="mini-grid">
-          <article><strong>Імміграція</strong><span>TRV, право на роботу й підтверджені правила IRCC.</span></article>
-          <article><strong>Кар'єра</strong><span>Цільові ролі, CV, портфоліо й ритм пошуку.</span></article>
-          <article><strong>Поселення</strong><span>Бюджет, житло, медицина та перші 90 днів.</span></article>
-          <article><strong>PR</strong><span>Порівняння маршрутів лише за офіційними критеріями.</span></article>
-        </div>
-      </section>
-
-      <section id="timeline" class="knowledge-section">
-        <p class="eyebrow">02 / контрольні точки</p>
-        <h2>Перед дією — ще одна перевірка</h2>
-        <div class="timeline-item"><span>До поїздки</span><p>Перевірити чинність паспорта, TRV/eTA й work permit. Work permit сам по собі не є документом для в'їзду.</p></div>
-        <div class="timeline-item"><span>До 31.03.2027</span><p>За наявності відповідності умовам — перевірити спеціальну процедуру продовження open work permit для українців.</p></div>
-      </section>
-
-      <section id="decisions" class="knowledge-section">
-        <p class="eyebrow">03 / рішення</p>
-        <h2>Публічний GitHub — не папка з документами</h2>
-        <p>План, короткі висновки, посилання й знеособлені артефакти можуть бути публічними. Паспорти, дозволи, довідки, адреси, банківські та медичні матеріали, повний Telegram-експорт і приватні контакти залишаються локально.</p>
-      </section>
-
-      <section id="archive" class="knowledge-section">
-        <p class="eyebrow">04 / локальний архів</p>
-        <h2>Досвід спільноти — тільки як контекст</h2>
-        <p>Локальний Telegram-індекс допомагає знаходити запитання, повторювані теми й практичний досвід. Він не публікується і не є джерелом правил: повідомлення, автори, контакти, запрошення та вкладення залишаються поза GitHub.</p>
-        <p><a href="https://github.com/Ayashi777/way-to-canada/blob/main/docs/data/telegram-archive-local-index.md" target="_blank" rel="noreferrer">Переглянути безпечний індекс і методологію →</a></p>
-      </section>
-
-      <section id="sources" class="knowledge-section sources-section">
-        <p class="eyebrow">05 / першоджерела</p>
-        <h2>IRCC — основа для імміграційних рішень</h2>
-        <ul class="source-list">
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/extend/travel-outside-canada.html" target="_blank" rel="noreferrer">Подорож і повторний в'їзд із work permit</a><span>Work permit не замінює TRV/eTA.</span></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-new-temporary-resident-visa-within-canada.html" target="_blank" rel="noreferrer">TRV для працівників і студентів з Канади</a><span>Окрема процедура visitor visa для тих, хто відповідає умовам.</span></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/ukraine-measures/open-work-permit-extension.html" target="_blank" rel="noreferrer">Продовження open work permit для українців</a><span>Умови та строк слід перевіряти перед поданням.</span></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/bulgaria.html" target="_blank" rel="noreferrer">Police certificate із Болгарії</a><span>Інструкція IRCC щодо документа та способу отримання.</span></li>
-        </ul>
-      </section>
-
-      <section id="journal" class="knowledge-section journal-section">
-        <p class="eyebrow">06 / журнал</p>
-        <h2>Щоденний огляд</h2>
-        <p>Кожен суттєвий крок має містити дату, результат, джерело або артефакт, вплив на план і один наступний конкретний крок.</p>
-        <p class="journal-rule">Журнал і документи у репозиторії — публічні. Не додавайте до них персональні дані або приватні файли.</p>
-      </section>
+      <nav class="crumbs" aria-label="Навігація"><a href="index.html">← До плану</a><a href="#timeline">Контрольні точки</a><a href="#archive">Індекс архіву</a><a href="#sources">Джерела IRCC</a><a href="#journal">Журнал</a></nav>
+      <section id="timeline" class="knowledge-section"><p class="eyebrow">01 / контрольні точки</p><h2>Перед дією — перевірка</h2><div id="timeline-content"><p class="loading">Завантаження…</p></div></section>
+      <section id="decisions" class="knowledge-section"><p class="eyebrow">02 / рішення</p><h2>Публічний GitHub — не папка з документами</h2><div id="decisions-content"></div></section>
+      <section id="archive" class="knowledge-section"><p class="eyebrow">03 / локальний архів</p><h2>Досвід спільноти — тільки як контекст</h2><div id="archive-content"></div></section>
+      <section id="sources" class="knowledge-section sources-section"><p class="eyebrow">04 / першоджерела</p><h2>IRCC — основа для імміграційних рішень</h2><div id="sources-content"></div></section>
+      <section id="journal" class="knowledge-section journal-section"><p class="eyebrow">05 / журнал</p><h2>Останні публічні записи</h2><div id="journal-content"></div></section>
     </main>
-
-    <footer>Way to Canada · публічний план оновлюється через GitHub · приватні документи зберігаються локально</footer>
+    <footer>Way to Canada · згенеровано з безпечних публічних матеріалів · приватні документи зберігаються локально</footer>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -3,103 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Публічний план підготовки до Канади: актуальні напрями, найближчі кроки та перевірені джерела." />
+    <meta name="description" content="Публічний, автоматично зібраний план підготовки до Канади." />
     <title>Way to Canada</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="plan">
     <header class="page-header">
       <div>
         <p class="eyebrow">Публічний робочий план</p>
         <h1>Way to Canada</h1>
-        <p class="subtitle">Статус · робота · поселення · шлях до PR</p>
+        <p class="subtitle">План · контрольні точки · рішення · джерела</p>
       </div>
-      <div class="progress-box" aria-label="Прогрес плану">
-        <span id="progress-label">Оновлено 15.09.2026</span>
-        <div class="progress-track"><div id="progress-bar"></div></div>
-      </div>
+      <p class="updated-stamp">Згенеровано з публічних документів<br /><strong id="updated-date">—</strong></p>
     </header>
-
     <main>
-      <section class="notice" aria-label="Критичний дедлайн">
-        <strong>Критичний орієнтир:</strong> подання на продовження українського open work permit — до <strong>31.03.2027</strong>.
-        Перед дією перевірити персональну відповідність умовам IRCC та спосіб в’їзду.
-        <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/ukraine-measures/open-work-permit-extension.html" target="_blank" rel="noreferrer">Офіційні умови IRCC</a>
+      <section class="notice" aria-label="Правило оновлення">Стан формується з погодженого плану та журналу. Для імміграційних рішень перевіряйте офіційні джерела перед дією.</section>
+      <section class="knowledge" aria-label="Навігація">
+        <div><p class="eyebrow">Зібрано під час деплою</p><h2>Один публічний стан</h2><p>Сайт не має окремих ручних даних: він відображає дозволені Markdown-файли репозиторію.</p></div>
+        <div class="knowledge-links"><a href="knowledge.html#timeline">Контрольні точки</a><a href="knowledge.html#decisions">Рішення</a><a href="knowledge.html#archive">Індекс архіву</a><a href="knowledge.html#sources">Джерела IRCC</a><a href="knowledge.html#journal">Журнал</a></div>
       </section>
-
-      <section class="status-grid" aria-label="Поточний статус">
-        <article>
-          <p class="card-label">Зараз</p>
-          <p>Поза Канадою</p>
-        </article>
-        <article>
-          <p class="card-label">Документ на в’їзд</p>
-          <p>TRV: підготовка пакета</p>
-        </article>
-        <article>
-          <p class="card-label">Work permit</p>
-          <p>Чинність перевіряється за локальним документом</p>
-        </article>
-        <article>
-          <p class="card-label">Ціль</p>
-          <p>Робота в Канаді + стабільний шлях до PR</p>
-        </article>
-      </section>
-
-      <section class="knowledge" aria-label="План і джерела">
-        <div>
-          <p class="eyebrow">База знань</p>
-          <h2>План, рішення і перевірені джерела</h2>
-          <p>Статус оновлюється лише після щоденного огляду. Особисті документи та дані не публікуються.</p>
-        </div>
-        <div class="knowledge-links">
-          <a href="knowledge.html#plan">Головний план</a>
-          <a href="knowledge.html#timeline">Контрольні точки</a>
-          <a href="knowledge.html#decisions">Рішення</a>
-          <a href="knowledge.html#archive">Індекс архіву</a>
-          <a href="knowledge.html#sources">Джерела IRCC</a>
-          <a href="knowledge.html#journal">Журнал</a>
-        </div>
-      </section>
-
-      <nav class="filters" aria-label="Фільтр плану">
-        <button class="filter active" data-filter="all">Усе</button>
-        <button class="filter" data-filter="urgent">Терміново</button>
-        <button class="filter" data-filter="before-move">До в’їзду</button>
-        <button class="filter" data-filter="after-arrival">Після прильоту</button>
-        <button class="filter" data-filter="job">Робота</button>
-        <button class="filter" data-filter="pr">PR</button>
-      </nav>
-
-      <section class="plan" aria-label="План переїзду">
-        <article class="phase" data-phase="urgent before-move">
-          <div class="phase-heading"><span>01</span><div><h2>В’їзд і статус</h2><p>Зробити до купівлі квитків.</p></div></div>
-          <ol class="next-steps"><li>Підготувати пакет на visitor visa (TRV): пояснення, фінанси та підтвердження обставин.</li><li>Перевірити паспорти й історію поїздок для пакета TRV.</li><li>Підтвердити в IRCC право на продовження work permit.</li><li>Визначити цільове вікно в’їзду з часовим запасом.</li></ol>
-        </article>
-
-        <article class="phase" data-phase="before-move">
-          <div class="phase-heading"><span>02</span><div><h2>Підготовка до переїзду</h2><p>Документи, гроші, перші 30 днів.</p></div></div>
-          <ol class="next-steps"><li>Обрати основне й резервне місто за вакансіями, орендою та PR-маршрутом.</li><li>Оновити локальний бюджет на квитки, 2–3 місяці житла, депозит і побут.</li><li>Зібрати приватний цифровий архів документів поза GitHub.</li><li>Підготувати тимчасове житло та список довгострокових варіантів.</li></ol>
-        </article>
-
-        <article class="phase" data-phase="job before-move">
-          <div class="phase-heading"><span>03</span><div><h2>Пошук роботи</h2><p>Почати до переїзду, посилити після отримання адреси й SIN.</p></div></div>
-          <ol class="next-steps"><li>Підготувати канадські CV і LinkedIn для цільових ролей.</li><li>Зібрати 3–5 знеособлених кейсів для портфоліо.</li><li>Скласти перелік цільових ролей і компаній.</li><li>Налаштувати щотижневий ритм заявок і follow-up.</li></ol>
-        </article>
-
-        <article class="phase" data-phase="after-arrival">
-          <div class="phase-heading"><span>04</span><div><h2>Перші 30 днів у Канаді</h2><p>Побут, право працювати, адаптація.</p></div></div>
-          <ol class="next-steps"><li>Отримати SIN після підтвердження права на роботу.</li><li>Відкрити банківський рахунок і підключити канадський номер.</li><li>Подати документи на провінційну медичну програму та школу для дитини.</li><li>Подати на продовження open work permit лише після підтвердження відповідності.</li></ol>
-        </article>
-
-        <article class="phase" data-phase="pr">
-          <div class="phase-heading"><span>05</span><div><h2>Паралельний шлях до PR</h2><p>Не чекати, поки закінчиться permit.</p></div></div>
-          <ol class="next-steps"><li>Скласти план IELTS General / CELPIP і цільовий CLB.</li><li>Визначити потребу в ECA й порядок оцінки освіти.</li><li>Порівняти доступні PR-маршрути за офіційними критеріями.</li><li>Фіксувати канадський досвід роботи, NOC/TEER і години для майбутньої заявки.</li></ol>
-        </article>
-      </section>
+      <section id="plan-content" class="plan" aria-live="polite"><p class="loading">Завантаження погодженого плану…</p></section>
     </main>
-
-    <footer>Way to Canada · публічний план оновлюється через GitHub · приватні документи зберігаються локально</footer>
+    <footer>Way to Canada · згенеровано з безпечних публічних матеріалів · приватні документи зберігаються локально</footer>
     <script src="app.js"></script>
   </body>
 </html>
