@@ -1,12 +1,4 @@
-const tasks = [...document.querySelectorAll('[data-task]')];
 const filters = [...document.querySelectorAll('.filter')];
-
-tasks.forEach((task) => {
-  task.disabled = true;
-});
-
-document.querySelector('#progress-label').textContent =
-  'Статус оновлюється під час щоденного огляду';
 document.querySelector('#progress-bar').style.width = '0';
 
 filters.forEach((button) => {
