@@ -22,6 +22,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Check prohibited paths and common secret signatures
+        run: node scripts/check-public-content.mjs
       - name: Build the public site from approved repository content
         run: node scripts/build-site.mjs
       - uses: actions/configure-pages@v5

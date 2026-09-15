@@ -1,0 +1,22 @@
+name: Validate public content
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check prohibited paths and common secret signatures
+        run: node scripts/check-public-content.mjs
+      - name: Build the public site
+        run: node scripts/build-site.mjs

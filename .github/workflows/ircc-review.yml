@@ -1,0 +1,20 @@
+name: Review IRCC sources
+
+on:
+  schedule:
+    - cron: '17 8 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Verify official IRCC source availability
+        run: node scripts/check-ircc-sources.mjs

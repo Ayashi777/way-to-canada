@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { basename, dirname, relative, resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
@@ -10,8 +10,13 @@ const publicDocuments = [
   ['Кар’єра', 'docs/career/job-search-strategy.md'], ['Кар’єра', 'docs/career/resume-and-linkedin.md'], ['Кар’єра', 'docs/career/target-employers.md'],
   ['Поселення', 'docs/settlement/budget.md'], ['Поселення', 'docs/settlement/housing-health-school.md'], ['Поселення', 'docs/settlement/first-90-days.md'], ['Поселення', 'docs/settlement/documents-to-bring.md'],
   ['Навички', 'docs/language-and-skills.md'], ['Дані', 'docs/data/README.md'], ['Дані', 'docs/data/telegram-archive-governance.md'], ['Дані', 'docs/data/telegram-archive-local-index.md'],
-  ['Приватність', 'docs/private-materials-index.md'], ['Журнал', 'journal/2026-09.md'], ['Артефакти', 'artifacts/research/2026-09-15-telegram-archive-audit.md'], ['Шаблони', 'artifacts/templates/daily-review-checklist.md'], ['Проєкт', 'repository_restructure_plan.md'], ['Проєкт', 'docs/site-content-policy.md'],
+  ['Приватність', 'docs/private-materials-index.md'], ['Артефакти', 'artifacts/research/2026-09-15-telegram-archive-audit.md'], ['Шаблони', 'artifacts/templates/daily-review-checklist.md'], ['Проєкт', 'repository_restructure_plan.md'], ['Проєкт', 'docs/site-content-policy.md'],
 ];
+const journalDocuments = readdirSync(resolve(root, 'journal'), { withFileTypes: true })
+  .filter((entry) => entry.isFile() && /^\d{4}-\d{2}\.md$/.test(entry.name))
+  .map((entry) => ['Журнал', `journal/${entry.name}`])
+  .sort(([, left], [, right]) => left.localeCompare(right));
+publicDocuments.push(...journalDocuments);
 const slug = (value) => value.replace(/\.md$/i, '').replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-|-$/g, '').toLowerCase();
 const documentByPath = new Map(publicDocuments.map(([, path]) => [path, `doc-${slug(path)}`]));
 const escapeHtml = (value) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -19,7 +24,11 @@ const escapeHtml = (value) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;')
 function resolveLink(href, sourcePath) {
   if (/^(https?:|mailto:|#)/i.test(href)) return href;
   const target = relative(root, resolve(dirname(resolve(root, sourcePath)), href)).replaceAll('\\', '/');
-  return documentByPath.has(target) ? `#${documentByPath.get(target)}` : href;
+  if (documentByPath.has(target)) return `#${documentByPath.get(target)}`;
+  if (target && target !== '..' && !target.startsWith('../') && existsSync(resolve(root, target))) {
+    return `https://github.com/Ayashi777/way-to-canada/blob/main/${target}`;
+  }
+  return href;
 }
 function inline(value, sourcePath) {
   let safe = escapeHtml(value.trim());
