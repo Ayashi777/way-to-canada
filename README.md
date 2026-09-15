@@ -8,6 +8,7 @@
 - [Контрольні точки](docs/timeline.md)
 - [Журнал рішень](docs/decisions.md)
 - [Офіційні джерела IRCC](docs/immigration/official-sources.md)
+- [Безпечний індекс Telegram-архіву](docs/data/telegram-archive-local-index.md)
 - [Місячний журнал](journal/2026-09.md)
 - [План реструктуризації](repository_restructure_plan.md)
 
