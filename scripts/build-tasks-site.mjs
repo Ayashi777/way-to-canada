@@ -63,29 +63,30 @@ const doneTotal = doc.sections.reduce((n, s) => n + s.tasks.filter((t) => t.done
 const esc = (text) =>
   text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-const css = `:root{color-scheme:light}
+const css = `:root{color-scheme:light dark;--bg:#f5f6f8;--card:#fff;--card-path:#fff;--border:#e2e6ec;--border-soft:#eef1f5;--text:#1d2530;--path-text:#33404f;--muted:#6a7482;--detail:#5c6672;--faint:#8b94a0;--done:#1a7f37;--open:#b3661a;--badge-bg:#eef2f7;--badge-border:#dde3ea;--badge-text:#3c4a5a;--counter-bg:#e7f5ec;--counter-border:#cdeadd}
+@media (prefers-color-scheme:dark){:root{--bg:#0f141a;--card:#171e26;--card-path:#1c2530;--border:#2a3340;--border-soft:#232c37;--text:#e6ebf1;--path-text:#c3ccd8;--muted:#99a3b0;--detail:#99a3b0;--faint:#99a3b0;--done:#4ade80;--open:#fbbf24;--badge-bg:#232c37;--badge-border:#333e4d;--badge-text:#c3ccd8;--counter-bg:#16311f;--counter-border:#1f5c38}}
 *{box-sizing:border-box}
-body{margin:0;padding:2rem 1rem 3rem;background:#f5f6f8;color:#1d2530;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{margin:0;padding:2rem 1rem 3rem;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main{max-width:760px;margin:0 auto}
 h1{font-size:1.6rem;margin:0 0 .2rem}
-.subtitle{margin:0 0 1.4rem;color:#6a7482;font-size:.95rem}
-.path{background:#fff;border:1px solid #e2e6ec;border-radius:12px;padding:.9rem 1.1rem;margin-bottom:1rem}
-.path div{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86rem;color:#33404f;padding:.12rem 0}
-section{background:#fff;border:1px solid #e2e6ec;border-radius:12px;padding:1rem 1.2rem .9rem;margin:0 0 1rem}
+.subtitle{margin:0 0 1.4rem;color:var(--muted);font-size:.95rem}
+.path{background:var(--card-path);border:1px solid var(--border);border-radius:12px;padding:.9rem 1.1rem;margin-bottom:1rem}
+.path div{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86rem;color:var(--path-text);padding:.12rem 0}
+section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem .9rem;margin:0 0 1rem}
 h2{display:flex;justify-content:space-between;align-items:baseline;gap:.8rem;font-size:1.08rem;margin:.1rem 0 .5rem}
-.counter{flex:none;font-size:.78rem;font-weight:600;color:#1a7f37;background:#e7f5ec;border:1px solid #cdeadd;border-radius:999px;padding:.12rem .6rem}
+.counter{flex:none;font-size:.78rem;font-weight:600;color:var(--done);background:var(--counter-bg);border:1px solid var(--counter-border);border-radius:999px;padding:.12rem .6rem}
 ul.tasks{list-style:none;margin:0;padding:0}
-li.task{display:flex;gap:.6rem;padding:.5rem 0;border-top:1px solid #eef1f5}
+li.task{display:flex;gap:.6rem;padding:.5rem 0;border-top:1px solid var(--border-soft)}
 li.task:first-child{border-top:none}
 .mark{flex:none;font-size:.95rem;line-height:1.4}
-li.done .name{color:#1a7f37;text-decoration:line-through}
-li.open .mark{color:#b3661a}
-.badge{display:inline-block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.72rem;background:#eef2f7;border:1px solid #dde3ea;border-radius:6px;padding:.1rem .45rem;white-space:nowrap;color:#3c4a5a}
-.detail{color:#5c6672;font-size:.87rem;margin-top:.1rem}
-h3{font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:#8b94a0;margin:.8rem 0 .3rem}
-ul.notes{list-style:none;margin:0;padding:0;color:#8b94a0;font-size:.82rem}
+li.done .name{color:var(--done);text-decoration:line-through}
+li.open .mark{color:var(--open)}
+.badge{display:inline-block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.72rem;background:var(--badge-bg);border:1px solid var(--badge-border);border-radius:6px;padding:.1rem .45rem;white-space:nowrap;color:var(--badge-text)}
+.detail{color:var(--detail);font-size:.87rem;margin-top:.1rem}
+h3{font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin:.8rem 0 .3rem}
+ul.notes{list-style:none;margin:0;padding:0;color:var(--faint);font-size:.82rem}
 ul.notes li{padding:.12rem 0}
-footer{color:#8b94a0;font-size:.8rem;text-align:center;margin-top:1.2rem}`;
+footer{color:var(--faint);font-size:.8rem;text-align:center;margin-top:1.2rem}`;
 
 const html = [];
 html.push('<!DOCTYPE html>');
@@ -93,6 +94,7 @@ html.push('<html lang="uk">');
 html.push('<head>');
 html.push('<meta charset="utf-8">');
 html.push('<meta name="viewport" content="width=device-width, initial-scale=1">');
+html.push('<meta name="color-scheme" content="light dark">');
 html.push(`<title>${esc(doc.title)}</title>`);
 html.push(`<style>${css}</style>`);
 html.push('</head>');
