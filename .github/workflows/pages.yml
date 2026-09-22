@@ -24,8 +24,8 @@ jobs:
           node-version: 20
       - name: Check prohibited paths and common secret signatures
         run: node scripts/check-public-content.mjs
-      - name: Build the public site from approved repository content
-        run: node scripts/build-site.mjs
+      - name: Build the public task-checklist site from approved repository content
+        run: node scripts/build-tasks-site.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
