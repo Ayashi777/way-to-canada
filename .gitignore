@@ -21,3 +21,14 @@ Thumbs.db
 
 # Generated GitHub Pages artifact. The workflow rebuilds it from allowlisted public files.
 dist/
+
+# Local agent workspace state: memory notes, identity and persona files. Never publish.
+memory/
+USER.md
+SOUL.md
+IDENTITY.md
+DREAMS.md
+AGENTS.md
+
+# Local media staging area for inbound attachments.
+media/inbound/
