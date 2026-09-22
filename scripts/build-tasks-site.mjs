@@ -103,8 +103,9 @@ html.push(`<p class="subtitle">${esc(doc.subtitle)}</p>`);
 
 for (const section of doc.sections) {
   const doneCount = section.tasks.filter((t) => t.done).length;
+  const counter = section.tasks.length ? `<span class="counter">${doneCount}/${section.tasks.length} зроблено</span>` : '';
   html.push('<section>');
-  html.push(`<h2><span>${esc(section.title)}</span><span class="counter">${doneCount}/${section.tasks.length} зроблено</span></h2>`);
+  html.push(`<h2><span>${esc(section.title)}</span>${counter}</h2>`);
   if (section.intro.length) {
     html.push('<div class="path">');
     for (const line of section.intro) html.push(`<div>${esc(line)}</div>`);
